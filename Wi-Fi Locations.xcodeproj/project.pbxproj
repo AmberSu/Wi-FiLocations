@@ -7,15 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2290DBEC1FD5DC7200D5D25C /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2290DBEB1FD5DC6A00D5D25C /* libsqlite3.tbd */; };
+		22CBCC1C1FD71CDC00CA4DE8 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22CBCC1B1FD71CDC00CA4DE8 /* NetworkExtension.framework */; };
 		22E6EC931FD1C46D00153018 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E6EC921FD1C46D00153018 /* AppDelegate.swift */; };
 		22E6EC951FD1C46D00153018 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E6EC941FD1C46D00153018 /* ViewController.swift */; };
 		22E6EC981FD1C46D00153018 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22E6EC961FD1C46D00153018 /* Main.storyboard */; };
 		22E6EC9B1FD1C46D00153018 /* Wi_Fi_Locations.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 22E6EC991FD1C46D00153018 /* Wi_Fi_Locations.xcdatamodeld */; };
 		22E6EC9D1FD1C46D00153018 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22E6EC9C1FD1C46D00153018 /* Assets.xcassets */; };
 		22E6ECA01FD1C46D00153018 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22E6EC9E1FD1C46D00153018 /* LaunchScreen.storyboard */; };
+		22E6ECA81FD1CDFB00153018 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E6ECA71FD1CDFA00153018 /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2290DBE91FD5D9B500D5D25C /* WifiLocation-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WifiLocation-Bridging-Header.h"; sourceTree = "<group>"; };
+		2290DBEB1FD5DC6A00D5D25C /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		22CBCC1B1FD71CDC00CA4DE8 /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
+		22CBCC1D1FD71CDC00CA4DE8 /* Wi-Fi Locations.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Wi-Fi Locations.entitlements"; sourceTree = "<group>"; };
 		22E6EC8F1FD1C46D00153018 /* Wi-Fi Locations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wi-Fi Locations.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		22E6EC921FD1C46D00153018 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22E6EC941FD1C46D00153018 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +31,7 @@
 		22E6EC9C1FD1C46D00153018 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		22E6EC9F1FD1C46D00153018 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		22E6ECA11FD1C46D00153018 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22E6ECA71FD1CDFA00153018 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +39,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2290DBEC1FD5DC7200D5D25C /* libsqlite3.tbd in Frameworks */,
+				22CBCC1C1FD71CDC00CA4DE8 /* NetworkExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2290DBEA1FD5DC6A00D5D25C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				22CBCC1B1FD71CDC00CA4DE8 /* NetworkExtension.framework */,
+				2290DBEB1FD5DC6A00D5D25C /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		22E6EC861FD1C46D00153018 = {
 			isa = PBXGroup;
 			children = (
 				22E6EC911FD1C46D00153018 /* Wi-Fi Locations */,
 				22E6EC901FD1C46D00153018 /* Products */,
+				2290DBEA1FD5DC6A00D5D25C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,13 +76,16 @@
 		22E6EC911FD1C46D00153018 /* Wi-Fi Locations */ = {
 			isa = PBXGroup;
 			children = (
+				22CBCC1D1FD71CDC00CA4DE8 /* Wi-Fi Locations.entitlements */,
 				22E6EC921FD1C46D00153018 /* AppDelegate.swift */,
 				22E6EC941FD1C46D00153018 /* ViewController.swift */,
+				2290DBE91FD5D9B500D5D25C /* WifiLocation-Bridging-Header.h */,
 				22E6EC961FD1C46D00153018 /* Main.storyboard */,
 				22E6EC9C1FD1C46D00153018 /* Assets.xcassets */,
 				22E6EC9E1FD1C46D00153018 /* LaunchScreen.storyboard */,
 				22E6ECA11FD1C46D00153018 /* Info.plist */,
 				22E6EC991FD1C46D00153018 /* Wi_Fi_Locations.xcdatamodeld */,
+				22E6ECA71FD1CDFA00153018 /* TableViewCell.swift */,
 			);
 			path = "Wi-Fi Locations";
 			sourceTree = "<group>";
@@ -100,6 +123,14 @@
 					22E6EC8E1FD1C46D00153018 = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.NetworkExtensions.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -140,6 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22E6EC951FD1C46D00153018 /* ViewController.swift in Sources */,
+				22E6ECA81FD1CDFB00153018 /* TableViewCell.swift in Sources */,
 				22E6EC9B1FD1C46D00153018 /* Wi_Fi_Locations.xcdatamodeld in Sources */,
 				22E6EC931FD1C46D00153018 /* AppDelegate.swift in Sources */,
 			);
@@ -278,12 +310,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Wi-Fi Locations/Wi-Fi Locations.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P3Y6KB76J9;
 				INFOPLIST_FILE = "Wi-Fi Locations/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.amberApps.Wi-Fi-Locations";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "/Users/MacOS/Desktop/Wi-Fi Locations/Wi-Fi Locations/WifiLocation-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -293,6 +327,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Wi-Fi Locations/Wi-Fi Locations.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P3Y6KB76J9;
 				INFOPLIST_FILE = "Wi-Fi Locations/Info.plist";
